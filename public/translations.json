@@ -1,0 +1,25 @@
+{
+  "countries": [
+    {
+      "code": "IN",
+      "name": "India",
+      "languages": [
+        { "code": "en", "label": "English" },
+        { "code": "hi", "label": "Hindi" },
+        { "code": "ta", "label": "Tamil" }
+      ]
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "languages": [
+        { "code": "en", "label": "English" }
+      ]
+    }
+  ],
+  "translations": {
+    "en": { "home": "Home", "about": "About", "settings": "Settings" },
+    "hi": { "home": "होम", "about": "के बारे में", "settings": "सेटिंग्स" },
+    "ta": { "home": "முகப்பு", "about": "பற்றி", "settings": "அமைப்புகள்" }
+  }
+}

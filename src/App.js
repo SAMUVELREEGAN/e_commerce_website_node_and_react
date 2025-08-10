@@ -1,11 +1,20 @@
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Settings from "./pages/Settings";
+import Navbar from "./component/Navbar";
+import AdminPage from "./component/AdminPage";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1>Welcome World 1</h1>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/settings" element={<Settings />} />
+          <Route path="/admin" element={<AdminPage />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
