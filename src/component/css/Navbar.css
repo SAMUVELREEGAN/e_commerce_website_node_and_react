@@ -1,19 +1,16 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 /* Top navbar */
 .navbar-top {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  display: flex;
   justify-content: center;
   gap: 40px;
   background: white;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 .navbar-top a {
@@ -33,22 +30,35 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
+  display: flex;
   justify-content: space-around;
   background: white;
   padding: 10px 0;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 .navbar-bottom a {
   color: black;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .navbar-bottom a.active {
   color: royalblue;
 }
 
-/* Default mobile view */
+/* Spacers to prevent content hiding */
+.navbar-top-spacer {
+  height: 50px; /* Match top navbar height */
+  display: none; /* Show only on desktop */
+}
+
+.navbar-bottom-spacer {
+  height: 60px; /* Match bottom navbar height */
+  display: block; /* Show only on mobile */
+}
+
+/* Mobile first: top nav hidden, bottom nav visible */
 .navbar-top {
   display: none;
 }
@@ -56,12 +66,27 @@ body {
   display: flex;
 }
 
-/* Laptop view */
+/* Spacers for mobile */
+.navbar-top-spacer {
+  display: none;
+}
+.navbar-bottom-spacer {
+  display: block;
+}
+
+/* Desktop view */
 @media screen and (min-width: 768px) {
   .navbar-top {
     display: flex;
   }
   .navbar-bottom {
+    display: none;
+  }
+  /* Spacers for desktop */
+  .navbar-top-spacer {
+    display: block;
+  }
+  .navbar-bottom-spacer {
     display: none;
   }
 }
