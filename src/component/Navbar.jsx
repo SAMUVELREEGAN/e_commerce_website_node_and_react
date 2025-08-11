@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import CountryLanguageSelector from "./CountryLanguageSelector";
+// import CountryLanguageSelector from "./CountryLanguageSelector";
 import "./css/Navbar.css";
 import { FaCog, FaHome, FaUser } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
@@ -13,10 +13,10 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar-top">
-        <NavLink to="/" end>{t("home")}</NavLink>
+        <NavLink to="/" end>home</NavLink>
         <NavLink to="/about">{t("about")}</NavLink>
         <NavLink to="/settings">{t("settings")}</NavLink>
-        <CountryLanguageSelector />
+        {/* <CountryLanguageSelector /> */}
       </div>
 
       <div className="navbar-bottom">
