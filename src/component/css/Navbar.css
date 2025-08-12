@@ -1,30 +1,11 @@
-/* Top navbar */
+/* ===== Default Mobile-First Styles ===== */
+
+/* Top navbar hidden by default (mobile) */
 .navbar-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  background: white;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
+  display: none !important;
 }
 
-.navbar-top a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.1rem;
-}
-
-.navbar-top a.active {
-  color: royalblue;
-  font-weight: bold;
-}
-
-/* Bottom navbar */
+/* Bottom navbar visible by default (mobile) */
 .navbar-bottom {
   position: fixed;
   bottom: 0;
@@ -47,46 +28,36 @@
   color: royalblue;
 }
 
-/* Spacers to prevent content hiding */
-.navbar-top-spacer {
-  height: 50px; /* Match top navbar height */
-  display: none; /* Show only on desktop */
-}
-
-.navbar-bottom-spacer {
-  height: 60px; /* Match bottom navbar height */
-  display: block; /* Show only on mobile */
-}
-
-/* Mobile first: top nav hidden, bottom nav visible */
-.navbar-top {
-  display: none;
-}
-.navbar-bottom {
-  display: flex;
-}
-
-/* Spacers for mobile */
-.navbar-top-spacer {
-  display: none;
-}
-.navbar-bottom-spacer {
-  display: block;
-}
-
-/* Desktop view */
+/* ===== Desktop Styles (≥768px) ===== */
 @media screen and (min-width: 768px) {
+  /* Show top navbar */
   .navbar-top {
-    display: flex;
+    display: flex !important; /* force show on desktop */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
   }
+
+  .navbar-top a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+  }
+
+  .navbar-top a.active {
+    color: royalblue;
+    font-weight: bold;
+  }
+
+  /* Hide bottom navbar on desktop */
   .navbar-bottom {
-    display: none;
-  }
-  /* Spacers for desktop */
-  .navbar-top-spacer {
-    display: block;
-  }
-  .navbar-bottom-spacer {
     display: none;
   }
 }

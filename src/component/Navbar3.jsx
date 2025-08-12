@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import CountryLanguageSelector from "./CountryLanguageSelector";
 import "./css/Navbar.css";
 import { FaCog, FaHome, FaUser } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
@@ -11,10 +10,9 @@ export default function Navbar() {
     <>
       {/* Top navbar - Text (desktop) */}
       <div className="navbar-top">
-        <NavLink to="/" end>{t("home")}</NavLink>
-        <NavLink to="/about">{t("about")}</NavLink>
-        <NavLink to="/settings">{t("settings")}</NavLink>
-        <CountryLanguageSelector />
+        <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/settings">Settings</NavLink>
       </div>
       {/* Spacer for top navbar (desktop only) */}
       <div className="navbar-top-spacer"></div>
