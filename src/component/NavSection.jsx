@@ -14,7 +14,7 @@ const NavSection = () => {
      <Navbar expand="lg" className="navbar-top">
       <Container>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Nav className="me-auto">
+        <Nav className="mx-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/">Link</Nav.Link>
         </Nav>
@@ -29,10 +29,10 @@ const NavSection = () => {
         <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
           <FaUser />
         </NavLink>
-        <NavLink to="/menu" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
           <IoMenu />
         </NavLink>
-        <NavLink to="/cart" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
           <BsCart2 />
         </NavLink>
         <NavLink to="/settings" className={({ isActive }) => (isActive ? "active" : "")}>
