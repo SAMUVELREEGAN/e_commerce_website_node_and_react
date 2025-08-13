@@ -1,7 +1,7 @@
 import pic from '../assets/Mobile (1).jpeg'
 
 
-const categories = [
+export const categories = [
     {
         _id:"aaa",
         image:pic,
@@ -19,4 +19,3 @@ const categories = [
     },
 ]
 
-export default categories
