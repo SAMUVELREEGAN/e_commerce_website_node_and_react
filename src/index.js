@@ -5,12 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "./i18n";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { MyProvider } from './api/MyContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+<MyProvider>
     <App />
-  </React.StrictMode>
+  </MyProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
